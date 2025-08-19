@@ -1,3 +1,17 @@
+// Atualiza a lista de amigos na tela usando um loop for e elementos <li>
+function atualizarListaAmigos() {
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+    if (lista_de_amigos.length === 0) {
+        lista.innerHTML = '<p class="aviso">Nenhum amigo adicionado.</p>';
+        return;
+    }
+    for (let i = 0; i < lista_de_amigos.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = `${i + 1} - ${lista_de_amigos[i]}`;
+        lista.appendChild(li);
+    }
+}
 let lista_de_amigos = [];
 
 function add_amigos() {
